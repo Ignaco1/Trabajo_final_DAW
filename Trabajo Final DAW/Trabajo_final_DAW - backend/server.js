@@ -15,13 +15,14 @@ app.use(express.json());
 
 // Conexión a la base de datos SQL Server
 var configDB = {
-    connectionString: "Driver={ODBC Driver 17 for SQL Server};Server=DESKTOP-A7735VT\\SQLEXPRESS;Database=FutbolleDB;Trusted_Connection=yes;"
+    connectionString: "Driver={ODBC Driver 17 for SQL Server};Server=LAPTOP-4N09G2SQ\\SQLEXPRESS;Database=FutbolleDB;Trusted_Connection=yes;"
 };
 
 // Pool de conexiones
 var pool;
 async function conectarDB() {
     try {
+        console.log('Intentando conectar a SQL Server...');
         pool = await sql.connect(configDB);
         console.log('Conectado a SQL Server correctamente');
     } catch (error) {

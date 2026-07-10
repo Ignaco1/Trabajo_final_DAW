@@ -17,5 +17,8 @@
     "jsonwebtoken": "^9.0.3",
     "msnodesqlv8": "^5.2.1",
     "mssql": "^12.7.0"
+  },
+  "allowScripts": {
+    "msnodesqlv8@5.2.1": true
   }
 }
