@@ -1,0 +1,118 @@
+.panelAuth {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background-color: var(--colorSuperficie);
+    border: 1px solid var(--colorBorde);
+    width: 100%;
+    max-width: 480px;
+    overflow: hidden;
+}
+.tabsAuth {
+    display: flex;
+}
+.tabAuth {
+    flex: 1;
+    background-color: var(--colorFondo);
+    padding: 15px;
+    color: var(--colorTextoSuave);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+}
+.tabAuth:hover {
+    color: var(--colorTexto);
+}
+.tabAuth.activo {
+    background-color: var(--colorSuperficie);
+    color: var(--colorPrimario);
+    border-bottom-color: var(--colorPrimario);
+}
+.formularioAuth {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px 25px;
+}
+.formularioAuth h2 {
+    color: var(--colorPrimarioOscuro);
+    font-size: 22px;
+    font-weight: 900;
+    text-align: center;
+}
+.panelContacto {
+    background-color: var(--colorSuperficie);
+    border: 1px solid var(--colorBorde);
+    padding: 35px 30px;
+    width: 100%;
+    max-width: 600px;
+}
+.formularioContacto {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 20px;
+}
+.grupoCampo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.grupoCampo label {
+    color: var(--colorPrimarioOscuro);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.grupoCampo input,
+.grupoCampo textarea {
+    background-color: var(--colorFondo);
+    border: 2px solid var(--colorBorde);
+    padding: 12px;
+    color: var(--colorTexto);
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.grupoCampo textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+.grupoCampo input:focus,
+.grupoCampo textarea:focus {
+    border-color: var(--colorPrimario);
+}
+.grupoCampo input.invalido,
+.grupoCampo textarea.invalido {
+    border-color: var(--colorError);
+}
+.grupoCampo input.valido,
+.grupoCampo textarea.valido {
+    border-color: var(--colorAcierto);
+}
+.mensajeError {
+    color: var(--colorError);
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 15px;
+}
+.botonPrimario {
+    display: inline-block;
+    background-color: var(--colorPrimario);
+    padding: 14px 30px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+.botonPrimario:hover {
+    background-color: var(--colorPrimarioOscuro);
+}

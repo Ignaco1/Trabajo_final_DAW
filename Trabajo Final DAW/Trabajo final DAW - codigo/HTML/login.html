@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesion - Futbolle</title>
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/formularios.css">
+    <link rel="stylesheet" href="../CSS/modales.css">
+</head>
+<body>
+    <header class="cabecera">
+        <div class="logo">Futbolle</div>
+        <nav class="menu">
+            <a href="index.html">Jugar</a>
+            <a href="ranking.html">Ranking</a>
+            <a href="historial.html" class="linkPrivado oculto">Historial</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="https://github.com/Ignaco1/Trabajo_final_DAW" target="_blank" rel="noopener">GitHub</a>
+            <button id="botonTema" class="botonTema">Modo oscuro</button>
+            <a href="login.html" id="linkLogin" class="linkAuth">Iniciar sesion</a>
+            <div id="usuarioActivo" class="usuarioActivo oculto">
+                <span class="iconoUsuario">U</span>
+                <span id="nombreUsuarioActivo"></span>
+                <button id="botonLogout" class="botonLogout">Salir</button>
+            </div>
+        </nav>
+    </header>
+    <main class="contenedorPrincipal">
+        <section class="panelAuth">
+            <div class="tabsAuth">
+                <button id="tabLogin" class="tabAuth activo">Iniciar sesion</button>
+                <button id="tabRegistro" class="tabAuth">Registrarse</button>
+            </div>
+            <div id="formularioLogin" class="formularioAuth">
+                <h2>Iniciar sesion</h2>
+                <div class="grupoCampo">
+                    <label for="inputLoginUsuario">Usuario</label>
+                    <input type="text" id="inputLoginUsuario" placeholder="Tu nombre de usuario">
+                    <span id="errorLoginUsuario" class="mensajeError"></span>
+                </div>
+                <div class="grupoCampo">
+                    <label for="inputLoginContrasena">Contrasena</label>
+                    <input type="password" id="inputLoginContrasena" placeholder="Tu contrasena">
+                    <span id="errorLoginContrasena" class="mensajeError"></span>
+                </div>
+                <button id="botonLoginEnviar" class="botonPrimario">Entrar</button>
+            </div>
+            <div id="formularioRegistro" class="formularioAuth oculto">
+                <h2>Crear cuenta</h2>
+                <div class="grupoCampo">
+                    <label for="inputRegistroUsuario">Usuario</label>
+                    <input type="text" id="inputRegistroUsuario" placeholder="Minimo 3 caracteres">
+                    <span id="errorRegistroUsuario" class="mensajeError"></span>
+                </div>
+                <div class="grupoCampo">
+                    <label for="inputRegistroContrasena">Contrasena</label>
+                    <input type="password" id="inputRegistroContrasena" placeholder="Minimo 4 caracteres">
+                    <span id="errorRegistroContrasena" class="mensajeError"></span>
+                </div>
+                <div class="grupoCampo">
+                    <label for="inputRegistroContrasena2">Repetir contrasena</label>
+                    <input type="password" id="inputRegistroContrasena2" placeholder="Repeti la contrasena">
+                    <span id="errorRegistroContrasena2" class="mensajeError"></span>
+                </div>
+                <button id="botonRegistroEnviar" class="botonPrimario">Crear cuenta</button>
+            </div>
+        </section>
+    </main>
+    <div id="overlayModal" class="overlayModal">
+        <div id="cajaModal" class="cajaModal">
+            <button id="cerrarModal" class="cerrar">&times;</button>
+            <div id="tituloModal" class="titulo"></div>
+            <div id="cuerpoModal" class="cuerpo"></div>
+            <div id="botonesModal" class="botonesAccion"></div>
+        </div>
+    </div>
+    <footer class="piePagina">
+        <p>Futbolle - Proyecto final DAW 2026 - Universidad Abierta Interamericana</p>
+    </footer>
+    <script src="../JS/config.js"></script>
+    <script src="../JS/sesion.js"></script>
+    <script src="../JS/header.js"></script>
+    <script src="../JS/api-backend.js"></script>
+    <script src="../JS/login.js"></script>
+</body>
+</html>

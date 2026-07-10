@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futbolle - Adiviná el jugador</title>
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/juego.css">
+    <link rel="stylesheet" href="../CSS/modales.css">
+</head>
+<body>
+    <header class="cabecera">
+        <div class="logo">Futbolle</div>
+        <nav class="menu">
+            <a href="index.html">Jugar</a>
+            <a href="ranking.html">Ranking</a>
+            <a href="historial.html" class="linkPrivado oculto">Historial</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="https://github.com/Ignaco1/Trabajo_final_DAW" target="_blank" rel="noopener">GitHub</a>
+            <button id="botonTema" class="botonTema">Modo oscuro</button>
+            <a href="login.html" id="linkLogin" class="linkAuth">Iniciar sesion</a>
+            <div id="usuarioActivo" class="usuarioActivo oculto">
+                <span class="iconoUsuario">U</span>
+                <span id="nombreUsuarioActivo"></span>
+                <button id="botonLogout" class="botonLogout">Salir</button>
+            </div>
+        </nav>
+    </header>
+    <main class="contenedorPrincipal">
+        <section id="panelInicio" class="panelJugador">
+            <h2>Empeza tu partida</h2>
+            <p>Tenes 8 intentos para adivinar el jugador secreto. Recibi pistas visuales por cada atributo comparado.</p>
+            <p class="avisoLogin" id="avisoLogin">Podes jugar sin cuenta, pero <a href="login.html">iniciando sesion</a> se guardan tus partidas en el ranking.</p>
+            <button id="botonComenzar">Comenzar partida</button>
+        </section>
+        <section id="panelJuego" class="panelJuego oculto">
+            <div class="barraEstado">
+                <div class="item">
+                    <span class="etiqueta">Intentos restantes</span>
+                    <span class="valor" id="contadorIntentos">8</span>
+                </div>
+                <div class="item">
+                    <span class="etiqueta">Tiempo</span>
+                    <span class="valor" id="contadorTiempo">00:00</span>
+                </div>
+                <div class="item botonesSecundarios">
+                    <button id="botonReiniciar" class="botonSecundario">Reiniciar partida</button>
+                </div>
+            </div>
+            <div id="zonaPistas" class="zonaPistas oculto">
+                <span class="tituloPistas">Pistas reveladas</span>
+                <div id="listaPistas" class="listaPistas"></div>
+            </div>
+            <div class="zonaBusqueda">
+                <div class="filaBusqueda">
+                    <input type="text" id="inputBusqueda" placeholder="Busca un jugador (minimo 2 letras)" autocomplete="off">
+                    <button id="botonRandom" class="botonRandom" title="Elegir jugador random">Random</button>
+                    <button id="botonEnviarIntento">Enviar intento</button>
+                </div>
+                <div id="listaAutocompletado" class="listaAutocompletado oculto"></div>
+            </div>
+            <div class="tablero">
+                <div id="encabezadoTablero" class="encabezadoTablero"></div>
+                <div id="tablero"></div>
+            </div>
+        </section>
+    </main>
+    <div id="overlayModal" class="overlayModal">
+        <div id="cajaModal" class="cajaModal">
+            <button id="cerrarModal" class="cerrar">&times;</button>
+            <div id="tituloModal" class="titulo"></div>
+            <div id="cuerpoModal" class="cuerpo"></div>
+            <div id="datosModal" class="datos oculto"></div>
+            <div id="botonesModal" class="botonesAccion"></div>
+        </div>
+    </div>
+    <footer class="piePagina">
+        <p>Futbolle - Proyecto final DAW 2026 - Universidad Abierta Interamericana</p>
+    </footer>
+    <script src="../JS/config.js"></script>
+    <script src="../JS/sesion.js"></script>
+    <script src="../JS/header.js"></script>
+    <script src="../JS/api-backend.js"></script>
+    <script src="../JS/api-jugadores.js"></script>
+    <script src="../JS/juego.js"></script>
+    <script src="../JS/dom-juego.js"></script>
+    <script src="../JS/eventos-juego.js"></script>
+</body>
+</html>
