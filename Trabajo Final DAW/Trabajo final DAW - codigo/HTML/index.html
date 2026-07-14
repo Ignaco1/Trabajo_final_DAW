@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futbolle - Adiviná el jugador</title>
+    <title>Futbolle - Adivina el jugador</title>
     <link rel="stylesheet" href="../CSS/reset.css">
     <link rel="stylesheet" href="../CSS/base.css">
     <link rel="stylesheet" href="../CSS/layout.css">
@@ -22,7 +22,9 @@
             <button id="botonTema" class="botonTema">Modo oscuro</button>
             <a href="login.html" id="linkLogin" class="linkAuth">Iniciar sesion</a>
             <div id="usuarioActivo" class="usuarioActivo oculto">
-                <span class="iconoUsuario">U</span>
+                <span class="iconoUsuario">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12zm0 2.4c-3.3 0-9.8 1.6-9.8 4.9v2.4h19.6v-2.4c0-3.3-6.5-4.9-9.8-4.9z"/></svg>
+                </span>
                 <span id="nombreUsuarioActivo"></span>
                 <button id="botonLogout" class="botonLogout">Salir</button>
             </div>
@@ -49,9 +51,15 @@
                     <button id="botonReiniciar" class="botonSecundario">Reiniciar partida</button>
                 </div>
             </div>
-            <div id="zonaPistas" class="zonaPistas oculto">
-                <span class="tituloPistas">Pistas reveladas</span>
-                <div id="listaPistas" class="listaPistas"></div>
+            <div class="zonaSuperior">
+                <div id="zonaFotoSecreta" class="zonaFotoSecreta oculto">
+                    <span class="tituloFoto">Jugador secreto</span>
+                    <img id="imgJugadorSecreto" src="" alt="Jugador secreto" class="fotoBlureada">
+                </div>
+                <div id="zonaPistas" class="zonaPistas oculto">
+                    <span class="tituloPistas">Pistas reveladas</span>
+                    <div id="listaPistas" class="listaPistas"></div>
+                </div>
             </div>
             <div class="zonaBusqueda">
                 <div class="filaBusqueda">

@@ -1,0 +1,118 @@
+.overlayModal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 40, 81, 0.6);
+    z-index: 1000;
+    padding: 20px;
+}
+.overlayModal.activo {
+    display: flex;
+}
+.cajaModal {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    background-color: var(--colorSuperficie);
+    border-top: 5px solid var(--colorPrimario);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 85vh;
+    overflow-y: auto;
+    color: var(--colorTexto);
+}
+.cajaModal.exito {
+    border-top-color: var(--colorAcierto);
+}
+.cajaModal.error {
+    border-top-color: var(--colorError);
+}
+.cajaModal .titulo {
+    color: var(--colorTexto);
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.cajaModal .titulo.exito {
+    color: var(--colorAcierto);
+}
+.cajaModal .titulo.error {
+    color: var(--colorError);
+}
+.cajaModal .cuerpo {
+    color: var(--colorTexto);
+    font-size: 15px;
+    line-height: 1.6;
+}
+.cajaModal .datos {
+    background-color: var(--colorFondo);
+    border-left: 4px solid var(--colorPrimario);
+    padding: 12px 15px;
+    color: var(--colorTexto);
+    font-size: 14px;
+}
+.cajaModal .cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    color: var(--colorTextoSuave);
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1;
+}
+.cajaModal .cerrar:hover {
+    color: var(--colorError);
+}
+.cajaModal .botonesAccion {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.cajaModal .botonesAccion button {
+    background-color: var(--colorPrimario);
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.cajaModal .botonesAccion button:hover {
+    background-color: var(--colorPrimarioOscuro);
+}
+.tarjetaJugadorRevelado {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--colorFondo);
+    padding: 15px;
+    border-radius: 8px;
+}
+.tarjetaJugadorRevelado img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--colorPrimario);
+}
+.tarjetaJugadorRevelado .info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    color: var(--colorTexto);
+    font-size: 14px;
+}
+.tarjetaJugadorRevelado .info strong {
+    color: var(--colorTextoTitulo);
+    font-size: 18px;
+}

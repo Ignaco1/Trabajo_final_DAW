@@ -1,0 +1,118 @@
+.panelHistorial {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1050px;
+}
+.controlesHistorial {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--colorSuperficie);
+    border: 1px solid var(--colorBorde);
+    padding: 15px 20px;
+}
+.controlesHistorial label {
+    color: var(--colorTextoTitulo);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.controlesHistorial select {
+    background-color: var(--colorFondo);
+    border: 2px solid var(--colorBorde);
+    padding: 8px 12px;
+    color: var(--colorTexto);
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+.controlesHistorial select:focus {
+    border-color: var(--colorPrimario);
+}
+.tablaHistorial {
+    width: 100%;
+    background-color: var(--colorSuperficie);
+    color: var(--colorTexto);
+}
+.tablaHistorial thead {
+    background-color: var(--colorPrimarioOscuro);
+    color: #ffffff;
+}
+.tablaHistorial th {
+    padding: 14px 10px;
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #ffffff;
+}
+.tablaHistorial th:first-child,
+.tablaHistorial th:nth-child(3),
+.tablaHistorial th:nth-child(4),
+.tablaHistorial th:nth-child(5),
+.tablaHistorial th:nth-child(6) {
+    text-align: center;
+}
+.tablaHistorial td {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--colorBorde);
+    color: var(--colorTexto);
+    font-size: 14px;
+}
+.tablaHistorial td:first-child,
+.tablaHistorial td:nth-child(4),
+.tablaHistorial td:nth-child(5) {
+    text-align: center;
+    font-weight: 700;
+}
+.tablaHistorial td:nth-child(6) {
+    text-align: center;
+    color: var(--colorPrimario);
+    font-size: 16px;
+    font-weight: 900;
+}
+.tablaHistorial td:last-child {
+    color: var(--colorTextoSuave);
+    font-size: 12px;
+}
+.tablaHistorial tbody tr:hover {
+    background-color: var(--colorFondo);
+}
+.tablaHistorial .estadoGano {
+    display: inline-block;
+    background-color: var(--colorAcierto);
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.tablaHistorial .estadoPerdio {
+    display: inline-block;
+    background-color: var(--colorError);
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+@media (max-width: 700px) {
+    .tablaHistorial th,
+    .tablaHistorial td {
+        font-size: 11px;
+        padding: 8px 4px;
+    }
+    .tablaHistorial td:nth-child(6) {
+        font-size: 13px;
+    }
+}
+
+

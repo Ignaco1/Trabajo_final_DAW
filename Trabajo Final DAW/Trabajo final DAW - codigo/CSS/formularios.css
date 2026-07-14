@@ -38,7 +38,7 @@
     padding: 30px 25px;
 }
 .formularioAuth h2 {
-    color: var(--colorPrimarioOscuro);
+    color: var(--colorTextoTitulo);
     font-size: 22px;
     font-weight: 900;
     text-align: center;
@@ -62,7 +62,7 @@
     gap: 6px;
 }
 .grupoCampo label {
-    color: var(--colorPrimarioOscuro);
+    color: var(--colorTextoEtiqueta);
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;

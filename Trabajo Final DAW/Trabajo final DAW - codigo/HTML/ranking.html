@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesion - Futbolle</title>
+    <title>Ranking - Futbolle</title>
     <link rel="stylesheet" href="../CSS/reset.css">
     <link rel="stylesheet" href="../CSS/base.css">
     <link rel="stylesheet" href="../CSS/layout.css">
-    <link rel="stylesheet" href="../CSS/formularios.css">
+    <link rel="stylesheet" href="../CSS/ranking.css">
     <link rel="stylesheet" href="../CSS/modales.css">
 </head>
 <body>
@@ -31,44 +31,50 @@
         </nav>
     </header>
     <main class="contenedorPrincipal">
-        <section class="panelAuth">
-            <div class="tabsAuth">
-                <button id="tabLogin" class="tabAuth activo">Iniciar sesion</button>
-                <button id="tabRegistro" class="tabAuth">Registrarse</button>
+        <section class="panelRanking">
+            <h1 class="tituloSeccion">Ranking global</h1>
+            <p class="subtituloSeccion">Los mejores jugadores de Futbolle</p>
+            <div id="podio" class="podio oculto">
+                <div class="podioLugar segundo">
+                    <div class="posicion">2</div>
+                    <div class="nombreLugar" id="podio2Nombre">-</div>
+                    <div class="puntosLugar"><span id="podio2Puntos">0</span> pts</div>
+                    <div class="baseLugar"></div>
+                </div>
+                <div class="podioLugar primero">
+                    <div class="corona">CAMPEON</div>
+                    <div class="posicion">1</div>
+                    <div class="nombreLugar" id="podio1Nombre">-</div>
+                    <div class="puntosLugar"><span id="podio1Puntos">0</span> pts</div>
+                    <div class="baseLugar"></div>
+                </div>
+                <div class="podioLugar tercero">
+                    <div class="posicion">3</div>
+                    <div class="nombreLugar" id="podio3Nombre">-</div>
+                    <div class="puntosLugar"><span id="podio3Puntos">0</span> pts</div>
+                    <div class="baseLugar"></div>
+                </div>
             </div>
-            <div id="formularioLogin" class="formularioAuth">
-                <h2>Iniciar sesion</h2>
-                <div class="grupoCampo">
-                    <label for="inputLoginUsuario">Usuario</label>
-                    <input type="text" id="inputLoginUsuario" placeholder="Tu nombre de usuario">
-                    <span id="errorLoginUsuario" class="mensajeError"></span>
-                </div>
-                <div class="grupoCampo">
-                    <label for="inputLoginContrasena">Contrasena</label>
-                    <input type="password" id="inputLoginContrasena" placeholder="Tu contrasena">
-                    <span id="errorLoginContrasena" class="mensajeError"></span>
-                </div>
-                <button id="botonLoginEnviar" class="botonPrimario">Entrar</button>
+            <div id="tablaRankingContenedor" class="tablaContenedor oculto">
+                <h2 class="tituloTabla">Otros jugadores</h2>
+                <table class="tablaRanking">
+                    <thead>
+                        <tr>
+                            <th>Puesto</th>
+                            <th>Usuario</th>
+                            <th>Partidas jugadas</th>
+                            <th>Partidas ganadas</th>
+                            <th>Puntaje total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoTablaRanking"></tbody>
+                </table>
             </div>
-            <div id="formularioRegistro" class="formularioAuth oculto">
-                <h2>Crear cuenta</h2>
-                <div class="grupoCampo">
-                    <label for="inputRegistroUsuario">Usuario</label>
-                    <input type="text" id="inputRegistroUsuario" placeholder="Minimo 3 caracteres">
-                    <span id="errorRegistroUsuario" class="mensajeError"></span>
-                </div>
-                <div class="grupoCampo">
-                    <label for="inputRegistroContrasena">Contrasena</label>
-                    <input type="password" id="inputRegistroContrasena" placeholder="Minimo 4 caracteres">
-                    <span id="errorRegistroContrasena" class="mensajeError"></span>
-                </div>
-                <div class="grupoCampo">
-                    <label for="inputRegistroContrasena2">Repetir contrasena</label>
-                    <input type="password" id="inputRegistroContrasena2" placeholder="Repeti la contrasena">
-                    <span id="errorRegistroContrasena2" class="mensajeError"></span>
-                </div>
-                <button id="botonRegistroEnviar" class="botonPrimario">Crear cuenta</button>
+            <div id="mensajeSinRanking" class="mensajeVacio oculto">
+                <p>Todavia no hay partidas registradas en el ranking.</p>
+                <p>Sea el primero en jugar!</p>
             </div>
+            <div id="cargandoRanking" class="mensajeCargando">Cargando ranking...</div>
         </section>
     </main>
     <div id="overlayModal" class="overlayModal">
@@ -86,6 +92,6 @@
     <script src="../JS/sesion.js"></script>
     <script src="../JS/header.js"></script>
     <script src="../JS/api-backend.js"></script>
-    <script src="../JS/login.js"></script>
+    <script src="../JS/ranking.js"></script>
 </body>
 </html>

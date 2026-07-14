@@ -3,6 +3,8 @@
     --colorSuperficie: #ffffff;
     --colorTexto: #002851;
     --colorTextoSuave: #6b7a8f;
+    --colorTextoTitulo: #002851;
+    --colorTextoEtiqueta: #002851;
     --colorBorde: #d5dee9;
     --colorPrimario: #0056ac;
     --colorPrimarioOscuro: #002851;
@@ -15,10 +17,12 @@ body.temaOscuro {
     --colorFondo: #0a1a2e;
     --colorSuperficie: #142842;
     --colorTexto: #e6ecf5;
-    --colorTextoSuave: #97a4b8;
+    --colorTextoSuave: #b5c1d1;
+    --colorTextoTitulo: #ffffff;
+    --colorTextoEtiqueta: #ffffff;
     --colorBorde: #294269;
     --colorPrimario: #4a90e2;
-    --colorPrimarioOscuro: #002851;
+    --colorPrimarioOscuro: #001a33;
 }
 body {
     background-color: var(--colorFondo);
@@ -39,5 +43,5 @@ p {
     color: var(--colorTexto);
 }
 .oculto {
-    display: none;
+    display: none !important;
 }

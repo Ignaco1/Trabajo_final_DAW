@@ -1,0 +1,189 @@
+.panelRanking {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    max-width: 950px;
+}
+.podio {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 15px;
+    padding: 40px 20px 0;
+    min-height: 340px;
+}
+.podioLugar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    flex: 1;
+    max-width: 200px;
+    padding-top: 10px;
+    text-align: center;
+}
+.podioLugar .posicion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    background-color: var(--colorPrimario);
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 900;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.podioLugar .nombreLugar {
+    color: var(--colorTextoTitulo);
+    font-size: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+    word-break: break-word;
+}
+.podioLugar .puntosLugar {
+    color: var(--colorTextoSuave);
+    font-size: 13px;
+    font-weight: 700;
+}
+.podioLugar .baseLugar {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    background-color: var(--colorPrimario);
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 900;
+    padding-top: 15px;
+    margin-top: 10px;
+}
+.podioLugar.primero .baseLugar {
+    height: 140px;
+    background-color: #ffc107;
+}
+.podioLugar.primero .posicion {
+    background-color: #ffc107;
+    color: #002851;
+    width: 65px;
+    height: 65px;
+    font-size: 30px;
+}
+.podioLugar.primero .corona {
+    background-color: #ffc107;
+    padding: 3px 10px;
+    color: #002851;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+}
+.podioLugar.segundo .baseLugar {
+    height: 100px;
+    background-color: #b0bec5;
+}
+.podioLugar.segundo .posicion {
+    background-color: #b0bec5;
+}
+.podioLugar.tercero .baseLugar {
+    height: 70px;
+    background-color: #cd7f32;
+}
+.podioLugar.tercero .posicion {
+    background-color: #cd7f32;
+}
+.tituloTabla {
+    color: var(--colorTextoTitulo);
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--colorPrimario);
+    margin-bottom: 15px;
+}
+.tablaRanking {
+    width: 100%;
+    background-color: var(--colorSuperficie);
+    color: var(--colorTexto);
+}
+.tablaRanking thead {
+    background-color: var(--colorPrimarioOscuro);
+    color: #ffffff;
+}
+.tablaRanking th {
+    padding: 14px 10px;
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #ffffff;
+}
+.tablaRanking th:first-child,
+.tablaRanking th:nth-child(3),
+.tablaRanking th:nth-child(4),
+.tablaRanking th:nth-child(5) {
+    text-align: center;
+}
+.tablaRanking td {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--colorBorde);
+    color: var(--colorTexto);
+    font-size: 14px;
+}
+.tablaRanking td:first-child,
+.tablaRanking td:nth-child(3),
+.tablaRanking td:nth-child(4),
+.tablaRanking td:nth-child(5) {
+    text-align: center;
+    font-weight: 700;
+}
+.tablaRanking td:nth-child(5) {
+    color: var(--colorPrimario);
+    font-size: 16px;
+    font-weight: 900;
+}
+.tablaRanking tbody tr:hover {
+    background-color: var(--colorFondo);
+}
+@media (max-width: 700px) {
+    .podio {
+        gap: 8px;
+        min-height: 280px;
+    }
+    .podioLugar .nombreLugar {
+        font-size: 13px;
+    }
+    .podioLugar .puntosLugar {
+        font-size: 11px;
+    }
+    .podioLugar .posicion {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+    }
+    .podioLugar.primero .posicion {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+    .podioLugar.primero .baseLugar {
+        height: 100px;
+    }
+    .podioLugar.segundo .baseLugar {
+        height: 70px;
+    }
+    .podioLugar.tercero .baseLugar {
+        height: 50px;
+    }
+    .tablaRanking th,
+    .tablaRanking td {
+        font-size: 11px;
+        padding: 8px 4px;
+    }
+}

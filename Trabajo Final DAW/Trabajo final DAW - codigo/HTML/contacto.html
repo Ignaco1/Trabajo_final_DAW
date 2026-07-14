@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesion - Futbolle</title>
+    <title>Contacto - Futbolle</title>
     <link rel="stylesheet" href="../CSS/reset.css">
     <link rel="stylesheet" href="../CSS/base.css">
     <link rel="stylesheet" href="../CSS/layout.css">
@@ -31,43 +31,26 @@
         </nav>
     </header>
     <main class="contenedorPrincipal">
-        <section class="panelAuth">
-            <div class="tabsAuth">
-                <button id="tabLogin" class="tabAuth activo">Iniciar sesion</button>
-                <button id="tabRegistro" class="tabAuth">Registrarse</button>
-            </div>
-            <div id="formularioLogin" class="formularioAuth">
-                <h2>Iniciar sesion</h2>
+        <section class="panelContacto">
+            <h1 class="tituloSeccion">Contacto</h1>
+            <p class="subtituloSeccion">Completa el formulario para enviarnos un mensaje</p>
+            <div class="formularioContacto">
                 <div class="grupoCampo">
-                    <label for="inputLoginUsuario">Usuario</label>
-                    <input type="text" id="inputLoginUsuario" placeholder="Tu nombre de usuario">
-                    <span id="errorLoginUsuario" class="mensajeError"></span>
+                    <label for="inputContactoNombre">Nombre</label>
+                    <input type="text" id="inputContactoNombre" placeholder="Tu nombre">
+                    <span id="errorContactoNombre" class="mensajeError"></span>
                 </div>
                 <div class="grupoCampo">
-                    <label for="inputLoginContrasena">Contrasena</label>
-                    <input type="password" id="inputLoginContrasena" placeholder="Tu contrasena">
-                    <span id="errorLoginContrasena" class="mensajeError"></span>
-                </div>
-                <button id="botonLoginEnviar" class="botonPrimario">Entrar</button>
-            </div>
-            <div id="formularioRegistro" class="formularioAuth oculto">
-                <h2>Crear cuenta</h2>
-                <div class="grupoCampo">
-                    <label for="inputRegistroUsuario">Usuario</label>
-                    <input type="text" id="inputRegistroUsuario" placeholder="Minimo 3 caracteres">
-                    <span id="errorRegistroUsuario" class="mensajeError"></span>
+                    <label for="inputContactoMail">Mail</label>
+                    <input type="text" id="inputContactoMail" placeholder="tu@email.com">
+                    <span id="errorContactoMail" class="mensajeError"></span>
                 </div>
                 <div class="grupoCampo">
-                    <label for="inputRegistroContrasena">Contrasena</label>
-                    <input type="password" id="inputRegistroContrasena" placeholder="Minimo 4 caracteres">
-                    <span id="errorRegistroContrasena" class="mensajeError"></span>
+                    <label for="inputContactoMensaje">Mensaje</label>
+                    <textarea id="inputContactoMensaje" rows="6" placeholder="Contanos que necesitas"></textarea>
+                    <span id="errorContactoMensaje" class="mensajeError"></span>
                 </div>
-                <div class="grupoCampo">
-                    <label for="inputRegistroContrasena2">Repetir contrasena</label>
-                    <input type="password" id="inputRegistroContrasena2" placeholder="Repeti la contrasena">
-                    <span id="errorRegistroContrasena2" class="mensajeError"></span>
-                </div>
-                <button id="botonRegistroEnviar" class="botonPrimario">Crear cuenta</button>
+                <button id="botonEnviarContacto" class="botonPrimario">Enviar mensaje</button>
             </div>
         </section>
     </main>
@@ -85,7 +68,6 @@
     <script src="../JS/config.js"></script>
     <script src="../JS/sesion.js"></script>
     <script src="../JS/header.js"></script>
-    <script src="../JS/api-backend.js"></script>
-    <script src="../JS/login.js"></script>
+    <script src="../JS/contacto.js"></script>
 </body>
 </html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial - Futbolle</title>
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/historial.css">
+    <link rel="stylesheet" href="../CSS/modales.css">
+</head>
+<body>
+    <header class="cabecera">
+        <div class="logo">Futbolle</div>
+        <nav class="menu">
+            <a href="index.html">Jugar</a>
+            <a href="ranking.html">Ranking</a>
+            <a href="historial.html" class="linkPrivado oculto">Historial</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="https://github.com/Ignaco1/Trabajo_final_DAW" target="_blank" rel="noopener">GitHub</a>
+            <button id="botonTema" class="botonTema">Modo oscuro</button>
+            <a href="login.html" id="linkLogin" class="linkAuth">Iniciar sesion</a>
+            <div id="usuarioActivo" class="usuarioActivo oculto">
+                <span class="iconoUsuario">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12zm0 2.4c-3.3 0-9.8 1.6-9.8 4.9v2.4h19.6v-2.4c0-3.3-6.5-4.9-9.8-4.9z"/></svg>
+                </span>
+                <span id="nombreUsuarioActivo"></span>
+                <button id="botonLogout" class="botonLogout">Salir</button>
+            </div>
+        </nav>
+    </header>
+    <main class="contenedorPrincipal">
+        <section class="panelHistorial">
+            <h1 class="tituloSeccion">Mi historial de partidas</h1>
+            <p class="subtituloSeccion" id="subtituloHistorial">Ultimas 25 partidas jugadas</p>
+            <div id="controlesHistorial" class="controlesHistorial oculto">
+                <label for="selectOrden">Ordenar por:</label>
+                <select id="selectOrden">
+                    <option value="fecha">Fecha (mas reciente)</option>
+                    <option value="intentos">Cantidad de intentos</option>
+                    <option value="puntaje">Puntaje</option>
+                </select>
+            </div>
+            <div id="tablaHistorialContenedor" class="tablaContenedor oculto">
+                <table class="tablaHistorial">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Jugador secreto</th>
+                            <th>Resultado</th>
+                            <th>Intentos</th>
+                            <th>Duracion</th>
+                            <th>Puntaje</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoTablaHistorial"></tbody>
+                </table>
+            </div>
+
+           <div id="mensajeSinHistorial" class="mensajeVacio oculto">
+                <p>Todavia no jugaste ninguna partida.</p>
+                <a href="index.html" class="botonPrimario">Jugar mi primera partida</a>
+            </div> 
+            <div id="mensajeNoLogueado" class="mensajeVacio oculto">
+                <p>Necesitas iniciar sesion para ver tu historial.</p>
+                <a href="login.html" class="botonPrimario">Iniciar sesion</a>
+            </div>
+            <div id="cargandoHistorial" class="mensajeCargando oculto">Cargando historial...</div>
+        </section>
+    </main>
+    <div id="overlayModal" class="overlayModal">
+        <div id="cajaModal" class="cajaModal">
+            <button id="cerrarModal" class="cerrar">&times;</button>
+            <div id="tituloModal" class="titulo"></div>
+            <div id="cuerpoModal" class="cuerpo"></div>
+            <div id="botonesModal" class="botonesAccion"></div>
+        </div>
+    </div>
+    <footer class="piePagina">
+        <p>Futbolle - Proyecto final DAW 2026 - Universidad Abierta Interamericana</p>
+    </footer>
+    <script src="../JS/config.js"></script>
+    <script src="../JS/sesion.js"></script>
+    <script src="../JS/header.js"></script>
+    <script src="../JS/api-backend.js"></script>
+    <script src="../JS/historial.js"></script>
+</body>
+</html>
