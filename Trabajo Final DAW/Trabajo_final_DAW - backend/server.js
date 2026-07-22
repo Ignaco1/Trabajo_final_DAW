@@ -206,6 +206,29 @@ app.get('/api/ranking', async function(req, res) {
     }
 });
 
+// GET /api/foto - proxy de imagenes del CDN de jugadores (evita el bloqueo ORB
+// que Chrome aplica a las imagenes de cdn.sofifa.net cuando se cargan cross-origin)
+app.get('/api/foto', async function(req, res) {
+    var url = req.query.url;
+    if (!url || !/^https:\/\/cdn\.sofifa\.net\//.test(url)) {
+        return res.status(400).json({ error: 'URL invalida' });
+    }
+    try {
+        var respuesta = await fetch(url);
+        if (!respuesta.ok) {
+            return res.status(502).end();
+        }
+        var buffer = Buffer.from(await respuesta.arrayBuffer());
+        res.set('Content-Type', respuesta.headers.get('content-type') || 'image/png');
+        res.set('Cache-Control', 'public, max-age=86400');
+        res.set('Cross-Origin-Resource-Policy', 'cross-origin');
+        res.send(buffer);
+    } catch (error) {
+        console.error('Error al obtener foto:', error.message);
+        res.status(502).end();
+    }
+});
+
 app.listen(PUERTO, function() {
     console.log('Backend Futbolle corriendo en http://localhost:' + PUERTO);
 });

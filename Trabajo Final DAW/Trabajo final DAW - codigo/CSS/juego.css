@@ -1,0 +1,366 @@
+.panelJugador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--colorSuperficie);
+    border: 1px solid var(--colorBorde);
+    padding: 35px 25px;
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+}
+.panelJugador h2 {
+    color: var(--colorTextoTitulo);
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.panelJugador p {
+    color: var(--colorTextoSuave);
+    font-size: 15px;
+}
+.panelJugador .avisoLogin {
+    background-color: var(--colorFondo);
+    border-left: 4px solid var(--colorPrimario);
+    padding: 12px 15px;
+    color: var(--colorTexto);
+    font-size: 13px;
+    text-align: left;
+    width: 100%;
+}
+.panelJugador .avisoLogin a {
+    color: var(--colorPrimario);
+    font-weight: 700;
+    text-decoration: underline;
+}
+.panelJugador button {
+    background-color: var(--colorPrimario);
+    padding: 14px 50px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.panelJugador button:hover {
+    background-color: var(--colorPrimarioOscuro);
+}
+.panelJuego {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.barraEstado {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: var(--colorSuperficie);
+    border: 1px solid var(--colorBorde);
+    padding: 15px 20px;
+    text-align: center;
+}
+.barraEstado .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    min-width: 100px;
+}
+.barraEstado .etiqueta {
+    color: var(--colorTextoEtiqueta);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.barraEstado .valor {
+    color: var(--colorTextoTitulo);
+    font-size: 26px;
+    font-weight: 900;
+}
+.barraEstado .botonesSecundarios {
+    flex-direction: row;
+    gap: 8px;
+}
+.botonSecundario {
+    background-color: transparent;
+    padding: 8px 16px;
+    border: 2px solid var(--colorPrimario);
+    border-radius: 6px;
+    color: var(--colorTextoTitulo);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+}
+.botonSecundario:hover {
+    background-color: var(--colorPrimario);
+    color: #ffffff;
+}
+.zonaSuperior {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.zonaFotoSecreta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 0 0 auto;
+    background-color: var(--colorSuperficie);
+    border: 1px solid var(--colorBorde);
+    padding: 15px 20px;
+}
+.zonaFotoSecreta .tituloFoto {
+    color: var(--colorTextoTitulo);
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.zonaFotoSecreta .fotoBlureada {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid var(--colorPrimario);
+    object-fit: cover;
+    filter: blur(20px);
+    transition: filter 0.4s;
+}
+.zonaPistas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    min-width: 200px;
+    background-color: #fff8e1;
+    border: 2px solid var(--colorAdvertencia);
+    padding: 15px 20px;
+}
+.zonaPistas .tituloPistas {
+    color: #002851;
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.zonaPistas .listaPistas {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: #002851;
+    font-size: 14px;
+}
+.zonaPistas .listaPistas .pista {
+    display: flex;
+    gap: 8px;
+    padding: 6px 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-left: 3px solid var(--colorAdvertencia);
+    color: #002851;
+}
+.zonaPistas .listaPistas .pista strong {
+    color: #0056ac;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.zonaBusqueda {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--colorSuperficie);
+    border: 1px solid var(--colorBorde);
+    padding: 20px;
+    position: relative;
+}
+.zonaBusqueda .filaBusqueda {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.zonaBusqueda input {
+    flex: 1;
+    min-width: 200px;
+    background-color: var(--colorFondo);
+    border: 2px solid var(--colorBorde);
+    padding: 12px;
+    color: var(--colorTexto);
+    font-size: 15px;
+    outline: none;
+}
+.zonaBusqueda input:focus {
+    border-color: var(--colorPrimario);
+}
+.zonaBusqueda button {
+    background-color: var(--colorPrimario);
+    padding: 12px 25px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.zonaBusqueda button:hover {
+    background-color: var(--colorPrimarioOscuro);
+}
+.zonaBusqueda button:disabled {
+    background-color: #99a5b5;
+    cursor: not-allowed;
+}
+.zonaBusqueda .botonRandom {
+    background-color: var(--colorAdvertencia);
+    padding: 12px 18px;
+    color: #002851;
+    font-size: 13px;
+    font-weight: 900;
+}
+.zonaBusqueda .botonRandom:hover {
+    background-color: #e0a800;
+}
+.listaAutocompletado {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    right: 20px;
+    max-height: 260px;
+    overflow-y: auto;
+    background-color: var(--colorSuperficie);
+    border: 1px solid var(--colorBorde);
+    z-index: 50;
+}
+.listaAutocompletado .item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--colorBorde);
+    cursor: pointer;
+    color: var(--colorTexto);
+}
+.listaAutocompletado .item:hover,
+.listaAutocompletado .item.activo {
+    background-color: var(--colorFondo);
+}
+.listaAutocompletado img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+.tablero {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+.encabezadoTablero {
+    display: flex;
+    gap: 6px;
+    background-color: var(--colorPrimarioOscuro);
+    padding: 12px 8px;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+.encabezadoTablero .celda {
+    flex: 1;
+    min-width: 0;
+}
+.encabezadoTablero .celda.foto {
+    flex: 0 0 55px;
+}
+.filaIntento {
+    display: flex;
+    gap: 6px;
+    background-color: var(--colorSuperficie);
+    border: 1px solid var(--colorBorde);
+    padding: 8px;
+}
+.filaIntento .celda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    padding: 8px 4px;
+    background-color: var(--colorTextoSuave);
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    word-break: break-word;
+}
+.filaIntento .celda.foto {
+    flex: 0 0 55px;
+    background-color: transparent;
+    padding: 0;
+}
+.filaIntento .celda.foto img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid var(--colorBorde);
+    object-fit: cover;
+}
+.filaIntento .celda.acierto {
+    background-color: var(--colorAcierto);
+}
+.filaIntento .celda.fallo {
+    background-color: var(--colorError);
+}
+.filaIntento .celda.mayor,
+.filaIntento .celda.menor {
+    background-color: var(--colorFlecha);
+}
+.filaIntento .celda.mayor::after {
+    content: " ▲";
+    color: #ffffff;
+}
+.filaIntento .celda.menor::after {
+    content: " ▼";
+    color: #ffffff;
+}
+@media (max-width: 700px) {
+    .filaIntento .celda {
+        font-size: 11px;
+        padding: 6px 2px;
+    }
+    .filaIntento .celda.foto,
+    .encabezadoTablero .celda.foto {
+        flex: 0 0 40px;
+    }
+    .filaIntento .celda.foto img {
+        width: 32px;
+        height: 32px;
+    }
+    .encabezadoTablero {
+        font-size: 9px;
+        padding: 8px 4px;
+    }
+    .barraEstado .valor {
+        font-size: 20px;
+    }
+    .zonaBusqueda .filaBusqueda {
+        flex-direction: column;
+    }
+    .zonaBusqueda input,
+    .zonaBusqueda button {
+        width: 100%;
+    }
+    .zonaSuperior {
+        flex-direction: column;
+    }
+    .zonaFotoSecreta {
+        align-self: center;
+    }
+}
